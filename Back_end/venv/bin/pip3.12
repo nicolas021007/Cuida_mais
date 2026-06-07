@@ -1,4 +1,4 @@
-#!/home/nicolas/Vscode/Clinica_API/Back_end/venv/bin/python3
+#!/home/nicolas/Vscode/Clinica_API/Github/Back_end/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
