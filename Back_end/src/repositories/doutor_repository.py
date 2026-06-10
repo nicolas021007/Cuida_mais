@@ -1,4 +1,4 @@
-from models.doutor import DoutorModel
+from Back_end.src.models.doutor_models.doutor import DoutorModel
 from domain.doutor import Doutor
 from uuid import uuid4
 from typing import List
