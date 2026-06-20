@@ -16,10 +16,26 @@ class RelatorioModel(Model):
     """
 
     id = fields.UUIDFIELD(pk = True)
+
+    # Chave estrangeira - Relacionamento com o Doutor
     doutor = fields.ForeignKeyField(
 
         "models.DoutorModel",
         related_name = "Relatorios",
         on_delete = fields.CASCADE
-        
     )
+    # Dados do paciente
+    paciente_nome = fields.CharField(max_length = 100)
+    paciente_cpf = fields.CharField(max_length = 14)
+
+    # Conteúdo do relatório
+
+    titulo = fields.CharField(max_length = 200)
+    conteudo = fields.TextField()
+
+    # Controle do sistema
+    criado_em = fields.DateTimeField(auto_now_add = True)
+
+    class Meta: 
+        table = "relatorios"
+        

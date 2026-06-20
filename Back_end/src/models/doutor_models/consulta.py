@@ -55,7 +55,7 @@ class ConsultaModel(Model):
 
     clinica_nome = fields.CharField(max_length = 100, default = "CLINICA SAÚDE")
 
-    criado_em = fields.DateTimeField(auto_nowadd = True)
+    criado_em = fields.DateTimeField(auto_now_add = True)
 
     class Meta:
         table = "consultas"

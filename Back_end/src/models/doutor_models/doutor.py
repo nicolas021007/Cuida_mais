@@ -28,7 +28,7 @@ class DoutorModel(Model):
     Representa um doutor cadastrado no sistema Cuida mais
     """
     # Dados pessoais do doutor
-    id = fields.UUIDFfield(pk =True)
+    id = fields.UUIDFfield(pk =True) # Chave primária
     nome = fields.charfield(max_lenght = 255)
     cpf = fields.charfield(max_lenght = 11, unique =True)
     sexo  = fields.charfield(max_lenght =20)
@@ -54,7 +54,7 @@ class DoutorModel(Model):
 
     # permite acessar doutor.consultas e doutor.relatorios.
 
-    consultas : fields.ReverseRelatio["ConsultaModel"]
+    consultas : fields.ReverseRelation["ConsultaModel"]
     relatorios: fields.ReverseRelation["RelatorioModel"]
 
 
